@@ -118,7 +118,38 @@
    padding: 12px;
 }
 
-@media screen and (max-width: 350px) {
+.navLinks:hover {
+   transform: scale(1);
+   transition: 0.5s;
+   box-shadow: #33bbcf;
+   transform-style: preserve-3d;
+}
+@-webkit-keyframes scale-up-center {
+   0% {
+      -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+   }
+   100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+   }
+}
+@keyframes scale-up-center {
+   0% {
+      -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+   }
+   100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+   }
+}
+.scale-up-center {
+   -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+   animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@media screen and (max-width: 399px) {
    .hero_section {
       padding: 0 1.5rem;
    }
@@ -156,39 +187,7 @@
       margin: 1rem 0;
    }
 }
-
-.navLinks:hover {
-   transform: scale(1);
-   transition: 0.5s;
-   box-shadow: #33bbcf;
-   transform-style: preserve-3d;
-}
-@-webkit-keyframes scale-up-center {
-   0% {
-      -webkit-transform: scale(0.5);
-      transform: scale(0.5);
-   }
-   100% {
-      -webkit-transform: scale(1);
-      transform: scale(1);
-   }
-}
-@keyframes scale-up-center {
-   0% {
-      -webkit-transform: scale(0.5);
-      transform: scale(0.5);
-   }
-   100% {
-      -webkit-transform: scale(1);
-      transform: scale(1);
-   }
-}
-.scale-up-center {
-   -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-   animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-}
-
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 400px) {
    .hero_section {
       padding: 0 1.5rem;
    }
